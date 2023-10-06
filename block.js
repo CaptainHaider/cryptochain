@@ -6,11 +6,4 @@ class Block {
     this.data = data;
   }
 }
-
-const block1 = new Block({
-  timeStamp: "01/01/01",
-  lastHash: "foo-lastHash",
-  hash: "foo-hash",
-  data: "data",
-});
-console.log({ block1 });
+module.exports = Block;
