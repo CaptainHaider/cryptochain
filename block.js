@@ -9,5 +9,12 @@ class Block {
   static genesis() {
     return new this(GENESIS_DATA);
   }
+  static minedBlock({ lastBlock, data }) {
+    return new this({
+      timeStamp: Date.now(),
+      lastHash: lastBlock.hash,
+      data,
+    });
+  }
 }
 module.exports = Block;
